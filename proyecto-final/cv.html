@@ -1,49 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Soria Julio Ezequiel</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand">Curriculum Vitae</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Estudios</a>
-              <a class="nav-link" href="#">Trabajos</a>
-              <a class="nav-link" href="#">Redes</a>
-            </div>
+      <div class="container-fluid">
+        <a class="navbar-brand">Curriculum Vitae</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="/proyecto-final/info.html">Info</a>
           </div>
         </div>
-      </nav>
-    <div class="row" >
-        <div class="h1">Soria Julio Ezequiel</div>
-        <div class="h2">Programador</div>
+      </div>
+    </nav>
+    <div class="row px-3 mx-3">
+      <div class="h1">
+        <div id="nombres"></div>
+      </div>
+      <div class="h2">
+        <div id="web"></div>
+      </div>
     </div>
-      
-      <div class="container my-4">
-        <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                <div>
-                    <img src="img/user.jpg" class="img-fluid max-width:100% height:auto box" width="200px" alt="mi foto">
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
-                <h1>Chau mundo</h1>
-            </div>
+
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+          <img
+            src="img/user.png"
+            class="img-fluid max-width:100% height:auto box"
+            width="200px"
+            alt="imagen usuario"
+          />
         </div>
-    </div>
+        <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+          <div class="h3">Datos Personales</div>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
+          <table class="table">
+            <tbody id="tablaDatos">
+            <!--
+            Tabla llenada dinamicamente con datos extraidos de un json.
+            -->
+            </tbody>
+          </table>
+          <div class="h3">Trabajo Actual</div>
+  
+            <table class="table">
+              <tbody id="tablaTrabajo">
+              <!--
+              Tabla llenada dinamicamente con datos extraidos de un json.
+              -->
+              </tbody>
+            </table>
+        </div>
+        <div class="container my-4">
+          <p class="TAR">*Datos consumidos desde la API de JSONPlaceholder</p>
+        </div>
+    <script src="/proyecto-final/js/script.js"></script><!--JavaScript personalizado-->
+    <script src="/proyecto-final/js/bootstrap.min.js"></script><!--JavaScript de Boostrap-->
+  </body>
 </html>
