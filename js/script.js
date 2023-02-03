@@ -1,7 +1,7 @@
 const listaUsuarios = async()=>{ //funcion para consumir un json y convertirlo en una lista
     const response = await fetch('https://jsonplaceholder.typicode.com/users')
     const datos = await response.json()
-    const numAleatorio = Math.floor(Math.random()*11) //Usamos un numero generado al azar para seleccionar un perfil del json
+    const numAleatorio = Math.floor(Math.random()*10) //Usamos un numero generado al azar para seleccionar un perfil del json
     let nombre = ``
     let webs = ``
     let tableNew = ``
@@ -17,27 +17,27 @@ const listaUsuarios = async()=>{ //funcion para consumir un json y convertirlo e
 
             //creamos el contenido de la tabla dinamica
             tableNew = `<tr>
-              <th>Ciudad</th>
+              <th><i class="fa-solid fa-city"></i> Ciudad</th>
               <td>${datos.address.city}</td>
             </tr>
             <tr>
-              <th>Calle</th>
+              <th><i class="fa-solid fa-road"></i> Calle</th>
               <td>${datos.address.street}</td>
             </tr>
             <tr>    
-              <th>Departamento</th>
+              <th><i class="fa-solid fa-building"></i> Departamento</th>
               <td>${datos.address.suite}</td>
             </tr>
             <tr>
-              <th>Codigo Postal</th>
+              <th><i class="fa-solid fa-location-dot"></i> Codigo Postal</th>
               <td>${datos.address.zipcode}</td>
             </tr>
             <tr>
-              <th>Telefono</th>
+              <th><i class="fa-solid fa-phone"></i> Telefono</th>
               <td>${datos.phone}</td>
             </tr>
             <tr>
-              <th>Mail</th>
+              <th><i class="fa-solid fa-at"></i> Mail</th>
               <td>${datos.email}</td>
             </tr>
             `
@@ -50,11 +50,11 @@ const listaUsuarios = async()=>{ //funcion para consumir un json y convertirlo e
             </tr>
             <tr>
               <th>Descripcion</th>
-              <td>${datos.company.catchPhrase}</td>
+              <td>${datos.company.bs}</td>
             </tr>
             <tr>    
               <th>Trabajo realizado</th>
-              <td>${datos.company.bs}</td>
+              <td>${datos.company.catchPhrase}</td>
             </tr>
             `
          
